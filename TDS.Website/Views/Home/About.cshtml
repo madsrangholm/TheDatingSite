@@ -1,0 +1,32 @@
+﻿@model TDS.Website.Models.HomeViewModel
+@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.AAAAAAAAAAAAAAAAAAAAAAAAA</h3>
+
+
+<h3>@Model.Name</h3>
+
+
+<form method="POST">
+    @Html.TextBoxFor(model => model.Name)
+    <button onclick="stuff()">SEND</button>
+</form>
+
+<p>Use this area to provide additional information.</p>
+
+<script>
+    var stuff = function() {
+        $.ajax({
+            type: "POST",
+            url: "Stuff",
+            data: 'blabla',
+            success: function(response) {
+                console.log(response);
+                alert(response);
+            }
+        });
+    }
+
+</script>
