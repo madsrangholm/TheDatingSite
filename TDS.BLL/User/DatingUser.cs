@@ -14,7 +14,7 @@ namespace TDS.BLL.User
         public string NickName { get; set; }
         public Sexuality Sexuality { get; set; }
         public Gender Gender { get; set; }
-        public MailAddress Email { get; set; }
+        public MailAddress Email { get; set; } 
 
     }
 }
